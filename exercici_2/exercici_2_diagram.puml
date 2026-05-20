@@ -1,0 +1,71 @@
+@startjson
+
+{
+  "db.glasses": [
+    "Value",
+    {
+      "Key": "Value",
+      "_id": "ObjectId",
+      "brand": "String",
+      "frame_type": "String",
+      "frame_color": "String",
+      "price": "Number (Double)",
+      "lenses": {
+        "Key": "Value",
+        "left": { "Key": "Value", "graduation": "Number (Double)", "color": "String" },
+        "right": { "Key": "Value", "graduation": "Number (Double)", "color": "String" }
+      },
+      "supplier_id": "ObjectId",
+      "sales_history": [
+        "Value",
+        {
+          "Value": "Key",
+          "sale_id": "ObjectId",
+          "sale_date": "ISODate",
+          "employee_name": "String",
+          "customer": {
+            "Key": "Value",
+            "name": "String",
+            "address": {
+              "Key": "Value",
+              "street": "String",
+              "number": "String",
+              "floor": "String",
+              "door": "String/Null",
+              "city": "String",
+              "zip_code": "String",
+              "country": "String"
+            },
+            "phone": "String",
+            "email": "String",
+            "registration_date": "ISODate",
+            "recommended_by_customer_id": "ObjectId/Null"
+          }
+        }
+      ]
+    }
+  ],
+  "db.suppliers": [
+    "Value",
+    {
+      "Key": "Value",
+      "_id": "ObjectId",
+      "name": "String",
+      "address": {
+        "Key": "Value",
+        "street": "String",
+        "number": "String",
+        "floor": "String",
+        "door": "String",
+        "city": "String",
+        "zip_code": "String",
+        "country": "String"
+      },
+      "phone": "String",
+      "fax": "String",
+      "nif": "String",
+      "brands_supplied": ["Value", "String"]
+    }
+  ]
+}
+@endjson
