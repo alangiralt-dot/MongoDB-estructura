@@ -1,6 +1,6 @@
 # alan_optics_ex1
 
-This repository contains the MongoDB data structure design for the "Cul d'Ampolla" optician shop automation system.
+This repository contains the design of the MongoDB data structure for the "Cul d'Ampolla" optical store automation system taking into account the customer's point of view.
 
 ---
 
@@ -36,12 +36,6 @@ db.customers.aggregate([
       localField: "sales_history.glasses.brand",
       foreignField: "brands_supplied",
       as: "sales_history.glasses.supplier_info"
-    }
-  },
-  {
-    $unwind: {
-      path: "$sales_history.glasses.supplier_info",
-      preserveNullAndEmptyArrays: true
     }
   }
 ]);
